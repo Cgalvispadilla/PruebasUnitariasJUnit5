@@ -19,6 +19,14 @@ public class BasicCalculator {
         logger.info( "multiplicando {} * {}", number1, number2 );
         return number1 * number2;
     }
+    public Long division(Long number1, Long number2) {
+        if(number2!=0){
+        logger.info( "dividiendo {} / {}", number1, number2 );
+        return number1 / number2;
+        }
+        logger.info( "No se puede dividir entre 0 ");
+        return Long.valueOf(-1);
+    }
 
 
 }

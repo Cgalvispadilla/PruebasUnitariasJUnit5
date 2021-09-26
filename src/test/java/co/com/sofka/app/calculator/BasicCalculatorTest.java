@@ -61,7 +61,7 @@ class BasicCalculatorTest {
         assertEquals(expectedResult, basicCalculator.resta(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
-    @DisplayName("Testing several resta")
+    @DisplayName("Testing several Multiplicacion")
     @ParameterizedTest(name = "{0} - {1} = {2}")
     @CsvSource({
             "1,    0,   0",
@@ -72,6 +72,19 @@ class BasicCalculatorTest {
     })
     public void severalMultiplicaciones(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.multiplicacion(first, second),
+                () -> first + " + " + second + " should equal " + expectedResult);
+    }
+    @DisplayName("Testing several division")
+    @ParameterizedTest(name = "{0} - {1} = {2}")
+    @CsvSource({
+            "1,    0,   -1",
+            "12,    12,   1",
+            "5,  1, 5",
+            "-1,  -1, 1",
+            "6,    2,  3"
+    })
+    public void severalDivisiones(Long first, Long second, Long expectedResult) {
+        assertEquals(expectedResult, basicCalculator.division(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
 }
