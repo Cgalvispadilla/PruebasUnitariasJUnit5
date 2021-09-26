@@ -61,4 +61,17 @@ class BasicCalculatorTest {
         assertEquals(expectedResult, basicCalculator.resta(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
+    @DisplayName("Testing several resta")
+    @ParameterizedTest(name = "{0} - {1} = {2}")
+    @CsvSource({
+            "1,    0,   0",
+            "12,    12,   144",
+            "5,  5, 25",
+            "-1,  -1, 1",
+            "5,    -5,  -25"
+    })
+    public void severalMultiplicaciones(Long first, Long second, Long expectedResult) {
+        assertEquals(expectedResult, basicCalculator.multiplicacion(first, second),
+                () -> first + " + " + second + " should equal " + expectedResult);
+    }
 }
