@@ -11,4 +11,9 @@ public class BasicCalculator {
         logger.info( "Summing {} + {}", number1, number2 );
         return number1 + number2;
     }
+    public Long resta(Long number1, Long number2) {
+        logger.info( "restando {} - {}", number1, number2 );
+        return number1 - number2;
+    }
+
 }
